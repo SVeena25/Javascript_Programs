@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div id="circle"></div>
+    <div>
+        <button onclick="moveCircleLeft()">Slide left</button>
+        <button onclick="moveCircleRight()">Slide right</button>
+    </div>
+
+    <script>
+        function moveCircleLeft() {
+            let circle = document.getElementById("circle");
+            circle.style.marginLeft = 0;
+        }
+    </script>
+
+    <blockquote id="quote">Quote</blockquote>
+    <cite id="author">Author</cite>
+    <div>
+        <button onclick="showQuote()">Show quote</button>
+        <button onclick="showAuthor()">Show author</button>
+    </div>
+    
+    <script>
+        function showQuote() {
+            let quote = document.getElementById("quote");
+            quote.innerText = "The measure of intelligence is the ability to change.";
+        }
+    </script>
+        <h1 id="page-title">Welcome to JavaScript!</h1>
+<p id="my-paragraph">This is a paragraph</p>
+<div id="giftbox">
+    <!-- img link to be upadted to AWS, if approved -->
+    <p>Happy Birthday Chris,<br> Enjoy your gift!</p>
+    <button onclick="openGift()">Open gift!</button>
+</div>
+<div id="my-div">
+  <p>Hello, I'm a large paragraph inside a div!</p>
+</div>
+
+<button onclick="changeStyle()">Click me to change the style!</button>
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
