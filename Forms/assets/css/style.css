@@ -1,0 +1,78 @@
+label,
+input,
+button {
+    display: block;
+    margin-top: 5px;
+}
+
+input {
+    display: block;
+}
+
+label,
+input,
+textarea {
+    display: block;
+    margin-top: 5px;
+}
+
+/* runnable2 */
+label,
+input,
+fieldset,
+button {
+    display: block;
+    margin-top: 5px;
+}
+
+/* Validating form data */
+/* runnable1 */
+label,
+input,
+button {
+    display: block;
+    margin-top: 5px;
+}
+
+/* runnable2 */
+label,
+input,
+button {
+    display: block;
+    margin-top: 5px;
+}
+
+/* Form submission */
+#feedback-message {
+    color: red;
+}
+
+label,
+input,
+button {
+    display: block;
+}
+
+/* runnable2 */
+#feedback-message {
+    color: red;
+}
+
+/* challenge */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    font-family: Lato, "sans-serif";
+}
+
+label,
+input,
+button {
+    display: block;
+    margin-top: 5px;
+}
+
+#feedback {
+    font-weight: bold;
+    color: red;
+}

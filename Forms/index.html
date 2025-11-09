@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="/Forms/assets/css/style.css">
+
+    <h2>Create an account</h2>
+    <form id="my-form">
+        <label for="username">Username: </label>
+        <input type="text" name="usernameField" id="username" required>
+        <label for="password">Password: </label>
+        <input type="password" name="passwordField" id="password" required>
+        <button type="submit">Submit</button>
+    </form>
+    <!-- runnable 2 -->
+
+
+    <h2>Enter some data</h2>
+    <form>
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" required>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <button type="submit">Show data</button>
+    </form>
+    <p id="message"></p>
+
+    <!-- Prepopulating form fields -->
+    <form>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="fName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="emailField" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+    </form>
+    <!-- runnable2 -->
+    <h2>Shipping address</h2>
+    <form id="contactForm">
+
+        <label for="full-name">Name:</label>
+        <input type="text" id="full-name" name="fullName" required>
+
+        <fieldset>
+            <legend>Address</legend>
+
+            <label for="street">Street:</label>
+            <input type="text" id="street" name="street" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="county">County:</label>
+            <input type="text" id="county" name="county" required>
+
+        </fieldset>
+    </form>
+    <!-- Validating form data -->
+    <!-- runnable1 -->
+    <h2>Movie tickets: Doom 16+</h2>
+    <form id="createAccountForm">
+        <label for="firstName">First name:</label>
+        <input type="text" id="firstName" name="firstNameField" required>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="ageField" required>
+        <p id="feedback"></p>
+        <button type="submit">Check if I can buy</button>
+    </form>
+    <!-- runnable2 -->
+    <p>Price: EUR <span id="price">50</span></p>
+    <form id="discountForm">
+        <label for="discountCode">Gift Code (optional):</label>
+        <input type="text" id="discountCode" name="discountCode">
+
+        <button type="submit">Show total</button>
+    </form>
+    <div id="message"></div>
+    <h3>To pay: EUR <span id="total"></span></h3>
+    <!-- Form submission -->
+    <h2>Enter your full name</h2>
+    <form id="name-form" method="POST" action="https://formdump.codeinstitute.net">
+        <label for="full-name">Name:</label>
+        <input type="text" id="full-name" name="fullName" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <p id="feedback-message"></p>
+        <button type="submit">Submit</button>
+    </form>
+    <!-- runnable2 -->
+    <h2>Concert Ticket Booking</h2>
+
+    <!-- complete the form attributes -->
+    <form id="ticket-form">
+        <div>
+            <label for="adult-tickets">Adult Tickets:</label>
+            <select id="adult-tickets" name="adultTickets">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <div>
+            <label for="child-tickets">Child Tickets:</label>
+            <select id="child-tickets" name="childTickets">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <p id="feedback-message"></p>
+        <div>
+            <button type="submit">Book Tickets</button>
+        </div>
+    </form>
+    <!-- runnable2 -->
+    <h2>Concert Ticket Booking</h2>
+
+    <!-- complete the form attributes -->
+    <form id="ticket-form">
+        <div>
+            <label for="adult-tickets">Adult Tickets:</label>
+            <select id="adult-tickets" name="adultTickets">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <div>
+            <label for="child-tickets">Child Tickets:</label>
+            <select id="child-tickets" name="childTickets">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <p id="feedback-message"></p>
+        <div>
+            <button type="submit">Book Tickets</button>
+        </div>
+    </form>
+    <form id="ticket-form" method="POST" action="https://formdump.codeinstitute.net">
+        <!-- challenge -->
+        <h2>Password update form</h2>
+        <form id="update-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" name="newPassword" required>
+
+            <div id="feedback"></div>
+
+            <button type="submit">Update Password</button>
+        </form>
+        <form id="update-form" method="POST" action=" https://formdump.codeinstitute.net"></form>
+
+
+        <script src="/Forms/assets/js/script.js"></script>
+</body>
+
+</html>

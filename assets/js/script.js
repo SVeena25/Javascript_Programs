@@ -690,3 +690,180 @@ function changeStyle() {
   const divElement = document.getElementById("my-div");
   divElement.style.backgroundColor = "lightblue";
 }
+function changeStyles() {
+    // Write your code here:
+    let divElement = document.getElementById("my-div");
+    divElement.style.backgroundColor = "purple";
+    divElement.style.color = "white";
+    divElement.style.fontSize = "24px";
+    divElement.style.fontWeight = "bold";
+}
+//Accessing and changing the classes of an element
+let divElement = document.getElementById("content");
+
+console.log(divElement.classList);
+console.log(divElement.classList[1]);
+
+ divElement.classList.add("red-text");
+ divElement.classList.remove("larger-text");
+ console.log(divElement.classList.value);
+
+ console.log(divElement.classList.contains("active"));
+//  Making queries with selectors
+let specialItem = document.querySelector(".special-item");
+console.log(specialItem);
+
+//Navigating DOM relationships
+let listItem = document.getElementById("special-item");
+
+let parentList = listItem.parentElement;
+console.log(parentList);
+// Adding and removing elements
+function addListItem() {
+    let list = document.getElementById("my-list");
+    let newItem = document.createElement("li");
+    newItem.innerText = "New List Item";
+    list.appendChild(newItem);
+}
+//
+let facts = [
+    {
+        title: "Hello World",
+        content: "The 'Hello World' program, often the first example in programming tutorials, dates back to the 1970s.",
+        imageURL: "https://codeinstitute.s3.eu-west-1.amazonaws.com/assets/EOL-1-hello-world.jpg",
+        imageAlt: "Hello World program"
+    },
+    {
+        title: "Python's Naming",
+        content: "Python, a popular programming language, was named after 'Monty Python's Flying Circus', a British comedy series, not the snake.",
+        imageURL: "https://codeinstitute.s3.eu-west-1.amazonaws.com/assets/EOL-2-python-logo.jpg",
+        imageAlt: "Python logo"
+    },
+    {
+        title: "Java and Coffee",
+        content: "Java, another famous language, got its name from Java coffee, reflecting the developers' love for coffee.",
+        imageURL: "https://codeinstitute.s3.eu-west-1.amazonaws.com/assets/EOL-3-java-logo.jpg",
+        imageAlt: "Java logo"
+    },
+    {
+        title: "Bug Origin",
+        content: "The first computer 'bug' was an actual moth found in a computer by Grace Hopper in 1947, leading to the use of the term 'bug' in computing.",
+        imageURL: "https://codeinstitute.s3.eu-west-1.amazonaws.com/assets/EOL-4-first-bug.jpg",
+        imageAlt: "First computer bug"
+    },
+    {
+        title: "First Programmer",
+        content: "Ada Lovelace is considered the first programmer for her work on Charles Babbage's Analytical Engine in the mid-1800s.",
+        imageURL: "https://codeinstitute.s3.eu-west-1.amazonaws.com/assets/EOL-5-ada-lovelace.jpg",
+        imageAlt: "Ada Lovelace"
+    },
+    {
+        title: "Y2K Bug",
+        content: "The Y2K bug in 2000 was a major event where computers might have misinterpreted the year 2000 due to date storage formats.",
+        imageURL: "https://codeinstitute.s3.eu-west-1.amazonaws.com/assets/EOL-6-y2k-bug.jpg",
+        imageAlt: "Y2K bug representation"
+    }
+];
+
+function addFact() {
+    
+}
+
+function clearAllFacts() {
+    
+}
+//debugging with devtools
+/*
+At the start, both the orange and lemon buttons show they have 10 fruits each.
+On first clicking, the count goes down by one, and the button shows how many
+are left. This keeps going until there are none left; the button then says
+"Out of Stock" to let the user know there are no more pieces of that fruit.
+At the same time, another button to add more stock becomes visible. Pressing
+this restock button brings the count back up to 10, updates the display,
+and hides the restock button again.
+*/
+
+// Initial counts for the buttons
+let orangeCount = 10;
+let lemonCount = 10;
+
+
+/**
+ * Function to handle clicking on the orange button
+ * Decreases the orange count
+ * Updates the button text and visibility of the restock button
+ */
+function takeAnOrange() {
+    if (orangeCount > 0) {
+        orangeCount--;
+        updateOrangeButtonText();
+        toggleRestockButtonVisibility('restock-orange', orangeCount);
+    }
+}
+
+/**
+ * Updates the text displayed on the orange button
+ * Shows the current count of oranges or 'Out of Stock' if none are left
+ */
+function updateOrangeButtonText() {
+    let button = document.getElementById('orange');
+    if (orangeCount > 0) {
+        button.innerText = `${orangeCount} Oranges Left`;
+    } else {
+        button.innerText = 'Out of Stock';
+    }
+}
+
+function restockOranges() {
+    orangeCount = 10;
+    toggleRestockButtonVisibility('restock-orange', orangeCount);
+}
+
+/**
+ * Function to handle clicking on the lemon button
+ * Decreases the lemon count and updates the button text and visibility of the restock button
+ */
+function takeALemon() {
+    if (lemonCount > 0) {
+        lemonCount--;
+        updateLemonButtonText();
+        toggleRestockButtonVisibility('restock-lemon', lemonCount);
+    }
+}
+
+/**
+ * Updates the text displayed on the lemon button
+ * Shows the current count of lemons or 'Out of Stock' if none are left
+ */
+function updateLemonButtonText() {
+    let button = document.getElementById('lemon');
+    if (lemonCount > 0) {
+        button.innerText = `${lemonCount} Lemons Left`;
+    } else {
+        button.innerText = 'Out of Stock';
+    }
+}
+
+function restockLemons() {
+    lemonCount = 10;
+    updateLemonButtonText();
+    toggleRestockButtonVisibility('restock-lemon', lemonCount);
+}
+
+/**
+ * Toggles the visibility of the restock button based on the fruit count
+ * The restock button is only shown when the count is 0 (out of stock)
+ */
+function toggleRestockButtonVisibility(buttonId, count) {
+    let button = document.getElementById(buttonId);
+    if (count === 0) {
+        button.classList.add('hidden');
+    } else {
+        button.classList.remove('hidden');
+    }
+}
+
+
+toggleRestockButtonVisibility('restock-orange', orangeCount);
+toggleRestockButtonVisibility('restock-lemon', lemonCount);
+

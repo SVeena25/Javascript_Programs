@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+
+<body>
 
     <div id="circle"></div>
     <div>
@@ -26,26 +28,48 @@
         <button onclick="showQuote()">Show quote</button>
         <button onclick="showAuthor()">Show author</button>
     </div>
-    
+
     <script>
         function showQuote() {
             let quote = document.getElementById("quote");
             quote.innerText = "The measure of intelligence is the ability to change.";
         }
     </script>
-        <h1 id="page-title">Welcome to JavaScript!</h1>
-<p id="my-paragraph">This is a paragraph</p>
-<div id="giftbox">
-    <!-- img link to be upadted to AWS, if approved -->
-    <p>Happy Birthday Chris,<br> Enjoy your gift!</p>
-    <button onclick="openGift()">Open gift!</button>
-</div>
-<div id="my-div">
-  <p>Hello, I'm a large paragraph inside a div!</p>
-</div>
+    <h1 id="page-title">Welcome to JavaScript!</h1>
+    <p id="my-paragraph">This is a paragraph</p>
+    <div id="giftbox">
+        <!-- img link to be upadted to AWS, if approved -->
+        <p>Happy Birthday Chris,<br> Enjoy your gift!</p>
+        <button onclick="openGift()">Open gift!</button>
+    </div>
+    <div id="my-div">
+        <p>Hello, I'm a large paragraph inside a div!</p>
+    </div>
 
-<button onclick="changeStyle()">Click me to change the style!</button>
+    <button onclick="changeStyle()">Click me to change the style!</button>
+    <button onClick="changeStyles()">Click me to change the style!</button>
+    <p id="content" class="main-content larger-text bold">Hello, JavaScript!</p>
+    <img id="logo" src="https://codeinstitute.s3.amazonaws.com/assets/logo.png" alt="Code Institute logo"
+        data-description="Learn to code with Code Institute!" width="300">
+    <h1>Fun Coding Facts</h1>
+    <div id="buttons-container">
+        <button class="btn btn-blue" onclick="clearAllFacts()">Clear facts</button>
+        <button class="btn btn-orange" onclick="addFact()">New fact</button>
+    </div>
+
+    <div id="facts-container" class="container"></div>
+    <!-- debugging with dev tools -->
+    <div class="fruit-container">
+        <button id="orange" class="fruit" onclick="takeAnOrange()">10 Oranges Left</button>
+        <button id="restock-orange" onclick="restockOranges()" class="hidden">Restock Oranges</button>
+    </div>
+    <div class="fruit-container">
+        <button id="lemon" class="fruit" onclick="takeALemon()">10 Lemons Left</button>
+        <button id="restock-lemon" onclick="restockLemons()" class="hidden">Restock Lemons</button>
+    </div>
+
     <script src="assets/js/script.js"></script>
 
 </body>
+
 </html>

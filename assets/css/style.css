@@ -8,7 +8,7 @@
     margin-left: 40px;
 }
 
-#quote, 
+#quote,
 #author {
     margin: 1rem;
 }
@@ -16,19 +16,148 @@
 div {
     padding-top: 1rem;
 }
+
 #giftbox {
     width: 210px;
     background-color: lightblue;
     border: 2px solid blue;
     text-align: center;
     padding: 20px;
-} 
+}
 
 
 img {
     width: 200px;
 }
+
 #my-div {
     background-color: yellow;
     font-size: 3rem;
+}
+
+.main-content {
+    font-family: arial;
+}
+
+.larger-text {
+    font-size: 40px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.red-text {
+    color: red;
+}
+
+/* Getting and setting HTML attributes */
+
+/* let imageElement = document.getElementById("logo");
+
+ imageElement.src = "https://codeinstitute.s3.eu-west-1.amazonaws.com/assets/hackathon.webp";
+
+ console.log(imageElement.alt);
+// imageElement.alt = "A group of people programming together";
+// console.log(imageElement.alt);
+
+// console.log(imageElement.getAttribute("data-description"));
+// imageElement.setAttribute("data-description", "All the cool kids love to code!");
+// console.log(imageElement.getAttribute("data-description")); */
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    color: #e84610;
+    margin: 5px;
+}
+
+.btn {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 100px;
+    border: 1px solid lightgrey;
+}
+
+.btn-orange {
+    background-color: #e84610;
+}
+
+.btn-blue {
+    background-color: #009fe3;
+}
+
+.container {
+    padding-top: 20px;
+}
+
+.fact-card {
+    text-align: center;
+    width: 200px;
+    height: 325px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+}
+
+.fact-card>p {
+    color: #4a4a4f;
+}
+
+.fact-card img {
+    height: 150px;
+}
+
+/* debugging with dev tools */
+body {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.fruit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1 0 300px;
+    width: 50%;
+}
+
+.fruit {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    border: none;
+    height: 300px;
+    flex: 0 0 300px;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 20px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#lemon {
+    background-image: url('https://codeinstitute.s3.eu-west-1.amazonaws.com/assets/lemonEOL.webp');
+}
+
+#orange {
+    background-image: url('https://codeinstitute.s3.eu-west-1.amazonaws.com/assets/orangeEOL.webp');
 }
